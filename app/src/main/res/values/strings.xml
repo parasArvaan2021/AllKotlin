@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">AllKotlin</string>
+    <string name="description">Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.\n\n
+    Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.</string>
+
+    <string name="address">Terry M Smith\n(904) 246-1297\n207 Cherry St,Neptune Beach,FL,32266</string>
+
+
+    <string name="embie_design_header">Hi Ravid, Today you\'re on day 10 of ovarian stimulation for your IVF/ICSI Cycle!</string>
+    <string name="text_home">Home</string>
+    <string name="text_calender">Calender</string>
+    <string name="text_notifications">notification</string>
+    <string name="text_light">Bulb</string>
+
+
+    <string name="Spinner_Des">GONAL-f contains a medicine called “follitropin alfa”. Follitropinalfa is a type of “Follicle Stimulating Hormone” (FSH) which
+        belongs to the family of hormones called “gonadotropins”. Gonadotropins are involved in reproduction and fertility.\n\n
+
+        In adult women, GONAL-f is used to help release an egg from the ovary (ovulation) in women that cannot ovulate and that did not respond to treatment
+        with a medicine called “clomiphene citrate”. Gonal-F is used to treat infertility in women who cannot ovulate. Gonal-F is not effective in women with
+        primary ovarian failure (when the ovaries are unable to produce an egg).\n\n
+
+        Gonal-f together with another medicine called “lutropin alfa” (“Luteinising Hormone” or LH) helps release egg from the ovary (ovulation) in women that are
+        not ovulating because their body is producing very little gonadotropins (FSH and LH).•\n\n
+
+        It also helps develop several follicles (each containing an egg) in women undergoing assisted reproductive technology procedures
+        (procedures that may help you to become pregnant) such as “in vitrofertilisation”, “gamete intra-fallopian
+        transfer” or “zygote intra-fallopian transfer”.\n</string>
+
+
+    <string name="MoreInfo_Des">BY ADDING THIS MEDICATION, YOU AGREE THAT IT WAS  PRESCRIBED BY YOUR DR OR THAT THE SUPPLEMENT OR HERB WAS RUN BY YOUR CLINIC.
+        YOUR MEDICATIONS CAN BE UPDATED AT ANY TIME BY CLICKING THE EDIT BUTTON. IF YOU HAVE ANY QUESTIONS REGARDING YOUR MEDICATION OR DOSAGE, PLEASE REFER
+        TO YOUR DR., CLINIC OR PHARMACIST.  Some of the information here is provided by Drugs.com\n</string>
+
+
+    <string name="Description">
+        Premium includes\n
+         <li>Detailed medication uses, videos and expected symptoms</li>\n
+         <li>Insights into your treatment cycle in real time.</li>\n
+         <li>Alerts, when something looks \'off\'</li>\n
+         <li>Tailored to you recommendations by diagnosis, protocol type, etc.</li>\n
+         <li>Access to hundreds of resources, videos &amp; more\n</li></string>
+
+
+    <string name="Disclaimer_Des">Information provided from drugs.com and xyz manufacturer. You may download the manufacturer pamphlet by clicking here.</string>
+</resources>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".EmbieDesign">
+
+            <ImageView
+                android:id="@+id/ImageCurve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_rectangle" />
+
+            <TextView
+                android:id="@+id/TxtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/asap"
+                android:text="@string/embie_design_header"
+                android:textColor="#545454"
+                android:textSize="@dimen/_18sdp" />
+
+            <RelativeLayout
+                android:id="@+id/LayoutTracking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ImageCurve"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/TxtTitleForTracking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/asap_bold"
+                    android:gravity="center"
+                    android:text="where you are"
+                    android:textAllCaps="true"
+                    android:textColor="#aaaaaa"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutTrackingView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TxtTitleForTracking"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/ImageCircleDownReg"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/ic_ovalpink"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/ic_iconarrow" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#facaca" />
+
+                    <ImageView
+                        android:id="@+id/ImageCircleStims"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/ic_ovalpink"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/syringe" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#facaca" />
+
+                    <ImageView
+                        android:id="@+id/ImageCircleRetrieval"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/ic_ovel_grey"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/eggs" />
+
+                    <View
+                        android:layout_width="100dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="#dedede" />
+
+                    <ImageView
+                        android:id="@+id/ImageCircleEmbies"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/ic_ovel_grey"
+                        android:padding="@dimen/_12sdp"
+                        android:src="@drawable/embryo" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/TxtDownReg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutTrackingView"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:fontFamily="@font/tenali_ramakrishna"
+                    android:text="down Reg"
+                    android:textColor="#facaca"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TxtStims"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutTrackingView"
+                    android:layout_marginStart="@dimen/_35sdp"
+                    android:layout_toEndOf="@id/TxtDownReg"
+                    android:fontFamily="@font/tenali_ramakrishna"
+                    android:text="stims"
+                    android:textColor="#facaca"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TxtRetrieval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutTrackingView"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_toEndOf="@id/TxtStims"
+                    android:fontFamily="@font/tenali_ramakrishna"
+                    android:text="retrieval"
+                    android:textColor="#aaaaaa"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TxtEmbies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/LayoutTrackingView"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_toEndOf="@id/TxtRetrieval"
+                    android:fontFamily="@font/tenali_ramakrishna"
+                    android:text="embies"
+                    android:textColor="#aaaaaa"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/LayoutDrDetails"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_below="@id/LayoutTracking"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/ViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/ButtonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/ic_icon__1_" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutInsight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LayoutDrDetails"
+                android:background="@drawable/ic_rectangle__2_"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TxtYourInsight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/asap_bold"
+                    android:text="Your insights"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#545454"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutRoundRectCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardViewOne"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/YellowImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:src="@drawable/ic_rounded" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@id/YellowImageView"
+                                android:layout_alignTop="@id/YellowImageView"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/asap"
+                                android:text="New"
+                                android:textAlignment="center"
+                                android:textColor="#545454" />
+
+                            <TextView
+                                android:id="@+id/TxtCardViewOne"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/asap_bold"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:text="Are you ready to trigger?"
+                                android:textAlignment="center"
+                                android:textColor="#f395b1"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/GifCardViewOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/TxtCardViewOne"
+                                android:layout_below="@id/YellowImageView"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp" />
+
+                            <ImageView
+                                android:id="@+id/LockImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/ic_ovalwhite"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_icon__2_" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardViewTwo"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/TxtCardViewTwo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/asap_bold"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:text="Monitoring with Wanda"
+                                android:textAlignment="center"
+                                android:textColor="#222222"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/GifCardViewTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_above="@id/TxtCardViewTwo"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardViewThree"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_130sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="@dimen/_10sdp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/TxtCardViewThree"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:fontFamily="@font/asap_bold"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:text="How you'll feel on Stims"
+                                android:textAlignment="center"
+                                android:textColor="#17a2b8"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/GifCardViewThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/TxtCardViewThree"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/LayoutBottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/TxtLog"
+            android:background="@drawable/shape"
+            app:itemHorizontalTranslationEnabled="false"
+            app:itemIconSize="@dimen/_20sdp"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_main" />
+
+        <TextView
+            android:id="@+id/TxtLog"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/ic_rectpink"
+            android:gravity="center"
+            android:text="Log Protocol"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

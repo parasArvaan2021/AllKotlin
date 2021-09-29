@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BottomNavigation">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_main"
+            app:itemIconTint="@drawable/nav_item_color_state"
+            app:itemRippleColor="@null"
+            android:layout_gravity="bottom"
+            app:itemTextColor="@drawable/nav_item_color_state"
+            app:itemIconSize="@dimen/_20sdp"
+            app:itemHorizontalTranslationEnabled="false"
+            android:background="@drawable/shape"/>
+
+        <TextView
+            android:id="@+id/TxtLog"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/ic_rectpink"
+            android:text="Log Protocol"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_gravity="end|bottom"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+</LinearLayout>

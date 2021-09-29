@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medication">
+
+    <Button
+        android:id="@+id/TxtTimeOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/TxtTimeTwo"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/TxtTimeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time2"
+        app:layout_constraintStart_toEndOf="@id/TxtTimeOne"
+        app:layout_constraintEnd_toStartOf="@id/TxtTimeThree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/TxtTimeThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TxtTimeTwo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <Button
+        android:id="@+id/SubScribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SubScribe"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TxtTimeTwo"
+        app:layout_constraintEnd_toStartOf="@id/UnSubScribe"
+        />
+    <Button
+        android:id="@+id/UnSubScribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="UnSubScribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TxtTimeTwo"
+        app:layout_constraintStart_toEndOf="@id/SubScribe"/>
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/SubScribe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
