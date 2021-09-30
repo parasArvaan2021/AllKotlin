@@ -18,9 +18,9 @@ class NotificationManager(val context: Context) {
     val NOTIFICATION_ID = 1
 
 
-    fun createNotification(title: String, message: String) {
+    fun createNotification(title: String, message: String, whenLong: Long) {
         createNotificationChannel()
-        val intent = Intent(context, Notification::class.java).apply {
+        val intent = Intent(context, NotificationClass::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
         val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
@@ -29,6 +29,8 @@ class NotificationManager(val context: Context) {
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_bulb)
             .setLargeIcon(icon)
+            .setShowWhen(true)
+            .setWhen(whenLong)
             .setContentTitle(title)
             .setContentText(message)
             .setStyle(

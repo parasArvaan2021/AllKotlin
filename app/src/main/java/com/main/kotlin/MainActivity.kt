@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -64,7 +63,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intent)
                 }
                 R.id.btnNotification -> {
-                    val intent = Intent(this,Notification::class.java)
+                    val intent = Intent(this,NotificationClass::class.java)
                     startActivity(intent)
                 }
             }

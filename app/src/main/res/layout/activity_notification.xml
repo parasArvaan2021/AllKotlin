@@ -4,51 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notification">
-
+    tools:context=".NotificationClass">
 
     <Button
         android:id="@+id/SendNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Send Notification"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/SechduleNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="StartDate"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/SendNotification" />
+
     <TextView
         android:id="@+id/tvShowDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Date"
-        app:layout_constraintTop_toBottomOf="@id/SechduleNotification"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:text="Show Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SechduleNotification" />
+
     <Button
         android:id="@+id/btnNotify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/SechduleNotification"
-        app:layout_constraintStart_toStartOf="parent"
         android:text="Notify"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SechduleNotification" />
+
     <Button
         android:id="@+id/btnCancle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancle"
-        app:layout_constraintTop_toBottomOf="@id/btnNotify"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnNotify" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

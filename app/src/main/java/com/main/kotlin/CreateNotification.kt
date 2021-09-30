@@ -10,7 +10,8 @@ class CreateNotification(val context: Context, val workerParams: WorkerParameter
 
         NotificationManager(context).createNotification(
             inputData.getString("title").toString(),
-            inputData.getString("message").toString()
+            inputData.getString("message").toString(),
+            inputData.getLong("long", 100)
 
         )
         return Result.success()
