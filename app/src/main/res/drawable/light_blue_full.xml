@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/remainder_press" />
+    <gradient
+        android:centerColor="@color/remainder_press"
+        android:endColor="@color/blue_tabBar_text"
+        android:startColor="@color/blue_tabBar_text" />
+    <stroke
+        android:width="0.7dip"
+        android:color="#505473FB" />
+    <corners android:radius="4sp" />
+</shape>

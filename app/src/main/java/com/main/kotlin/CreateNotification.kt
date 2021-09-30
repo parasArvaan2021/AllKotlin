@@ -8,7 +8,7 @@ class CreateNotification(val context: Context, val workerParams: WorkerParameter
     Worker(context, workerParams) {
     override fun doWork(): Result {
 
-        NotificationManager(context).createNotification(
+        NotificationManagerClass(context).createNotification(
             inputData.getString("title").toString(),
             inputData.getString("message").toString(),
             inputData.getLong("long", 100)

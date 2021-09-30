@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etAddDailyScheduleDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/editTextHeight"
+            android:background="@drawable/edit_background"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/schedule_date"
+            android:inputType="datetime"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/etAddDailyScheduleTime"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/editTextHeight"
+            android:background="@drawable/edit_background"
+            android:clickable="true"
+            android:editable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:hint="@string/schedule_time"
+            android:inputType="datetime"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize15" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAddDailyScheduleSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/editTextHeight"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/padding5"
+        android:text="@string/create_schedule"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize15"
+        android:visibility="visible" />
+
+</LinearLayout>

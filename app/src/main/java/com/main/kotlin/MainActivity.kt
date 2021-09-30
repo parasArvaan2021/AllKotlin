@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val LocalFileOpen: Button = findViewById(R.id.LocalFileOpen)
         val Fragment: Button = findViewById(R.id.FragmentExampleWithoutStateClear)
         val btnNotification: Button = findViewById(R.id.btnNotification)
+        val btnNotificationTesting: Button = findViewById(R.id.btnNotificationTesting)
 
+        btnNotificationTesting.setOnClickListener(this)
         btn_ripple_effect.setOnClickListener(this)
         btn_custom_progress.setOnClickListener(this)
         btnEmbieDesign.setOnClickListener(this)
@@ -63,7 +65,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     startActivity(intent)
                 }
                 R.id.btnNotification -> {
-                    val intent = Intent(this,NotificationClass::class.java)
+                    val intent = Intent(this, NotificationClass::class.java)
+                    startActivity(intent)
+                }
+                R.id.btnNotificationTesting -> {
+                    val intent = Intent(this, TestingNotification::class.java)
                     startActivity(intent)
                 }
             }

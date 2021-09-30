@@ -12,7 +12,7 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
-class NotificationManager(val context: Context) {
+class NotificationManagerClass(val context: Context) {
 
     val CHANNEL_ID = "channel_id"
     val NOTIFICATION_ID = 1

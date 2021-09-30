@@ -1,5 +1,6 @@
 package com.main.kotlin
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog.OnDateSetListener
 
 import android.os.Build
@@ -141,11 +142,15 @@ class NotificationClass : AppCompatActivity() {
 
     }
 
-    private fun scheduleNotification(notification: Notification, delay: Long) {
+    fun scheduleNotification(notification: Notification, delay: Long) {
         Log.i("paras", "scheduleNotification: $delay")
         val notificationIntent = Intent(this, MyScheduleNotification::class.java)
         notificationIntent.putExtra(MyScheduleNotification.NOTIFICATION_ID, 1)
         notificationIntent.putExtra(MyScheduleNotification.NOTIFICATION, notification)
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_NO_ABORT)
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING)
+        notificationIntent.addFlags(Intent.FLAG_FROM_BACKGROUND)
 
         val pendingIntent = PendingIntent.getBroadcast(
             this,
@@ -155,7 +160,8 @@ class NotificationClass : AppCompatActivity() {
         )
 
         val alarmManager = (getSystemService(Context.ALARM_SERVICE) as AlarmManager)
-        alarmManager[AlarmManager.RTC_WAKEUP, delay] = pendingIntent
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, delay, pendingIntent)
+
     }
 
     var date =
