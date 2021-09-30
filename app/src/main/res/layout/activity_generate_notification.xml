@@ -4,60 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotificationClass">
+    tools:context=".GenerateNotification">
+
 
 
     <Button
-        android:id="@+id/SendNotification"
+        android:id="@+id/btnStartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send Notification"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-    <Button
-        android:id="@+id/SechduleNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="StartDate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SendNotification" />
-    <TextView
-        android:id="@+id/tvShowDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show Date"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
-        android:id="@+id/btnOneNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/SechduleNotification"
+        android:text="Select Start Date"
+        android:onClick="onClickStartDate"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="One Notification"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <Button
-        android:id="@+id/btnTwoNotification"
+        android:id="@+id/btnEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Odd Notification"
-        app:layout_constraintTop_toBottomOf="@id/btnOneNotification"
+        android:text="Select End Date"
+        android:onClick="onClickEndDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnStartDate"/>
+    <Button
+        android:id="@+id/btnSelectFirstTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select First Times"
+        android:onClick="clickFirstTime"
+        app:layout_constraintTop_toBottomOf="@id/btnEndDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
     <Button
-        android:id="@+id/btnTwoDayAfter"
+        android:id="@+id/btnSelectSecondTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Two Day After"
-        app:layout_constraintTop_toBottomOf="@id/btnTwoNotification"
+        android:text="Select Second Times"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectFirstTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/btnSelectThirdTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Third Times"
+        app:layout_constraintTop_toBottomOf="@id/btnSelectSecondTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <TextView
+        android:id="@+id/tvShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show   Date And Time"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
