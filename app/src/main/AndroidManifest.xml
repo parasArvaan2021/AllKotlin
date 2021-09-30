@@ -29,8 +29,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".TestingNotification"
+            android:exported="true" />
+        <activity
+            android:name=".GenerateNotification"
             android:exported="true" />
         <activity
             android:name=".NotificationClass"

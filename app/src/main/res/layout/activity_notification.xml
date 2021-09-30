@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Send Notification"
         app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
@@ -38,6 +39,7 @@
         android:id="@+id/btnOneNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/SechduleNotification"
         app:layout_constraintStart_toStartOf="parent"
         android:text="One Notification"
@@ -47,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Odd Notification"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/btnOneNotification"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -55,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Two Day After"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@id/btnTwoNotification"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

@@ -32,6 +32,7 @@ class MyScheduleNotification : BroadcastReceiver() {
                 "NOTIFICATION_CHANNEL_NAME",
                 importance
             )
+
             notificationManager.createNotificationChannel(notificationChannel)
         }
         val id: Int? = intent?.getIntExtra(NOTIFICATION_ID, 0)

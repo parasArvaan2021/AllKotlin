@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val Fragment: Button = findViewById(R.id.FragmentExampleWithoutStateClear)
         val btnNotification: Button = findViewById(R.id.btnNotification)
         val btnNotificationTesting: Button = findViewById(R.id.btnNotificationTesting)
+        val btnMoreTimeCreateNotification:Button=findViewById(R.id.btnOneORMoreTimeCreateNotification)
 
         btnNotificationTesting.setOnClickListener(this)
         btn_ripple_effect.setOnClickListener(this)
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         LocalFileOpen.setOnClickListener(this)
         Fragment.setOnClickListener(this)
         btnNotification.setOnClickListener(this)
+        btnMoreTimeCreateNotification.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -70,6 +72,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 R.id.btnNotificationTesting -> {
                     val intent = Intent(this, TestingNotification::class.java)
+                    startActivity(intent)
+                }
+                R.id.btnOneORMoreTimeCreateNotification->{
+                    val intent=Intent(this,GenerateNotification::class.java)
                     startActivity(intent)
                 }
             }
