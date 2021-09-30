@@ -57,9 +57,6 @@ class NotificationClass : AppCompatActivity() {
         val btnSendNotification: Button = findViewById(R.id.SendNotification)
         val btnStartDate: Button = findViewById(R.id.SechduleNotification)
         tvShowDate = findViewById(R.id.tvShowDate)
-        val btnCancle: Button = findViewById(R.id.btnCancle)
-        val btnNotify: Button = findViewById(R.id.btnNotify)
-
         btnSendNotification.setOnClickListener(View.OnClickListener {
 
             createNotification()
