@@ -19,11 +19,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val EmbieMedication: Button = findViewById(R.id.EmbieMedication)
         val LocalFileOpen: Button = findViewById(R.id.LocalFileOpen)
         val Fragment: Button = findViewById(R.id.FragmentExampleWithoutStateClear)
-        val btnNotification: Button = findViewById(R.id.btnNotification)
-        val btnNotificationTesting: Button = findViewById(R.id.btnNotificationTesting)
+
         val btnMoreTimeCreateNotification:Button=findViewById(R.id.btnOneORMoreTimeCreateNotification)
 
-        btnNotificationTesting.setOnClickListener(this)
+
         btn_ripple_effect.setOnClickListener(this)
         btn_custom_progress.setOnClickListener(this)
         btnEmbieDesign.setOnClickListener(this)
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         EmbieMedication.setOnClickListener(this)
         LocalFileOpen.setOnClickListener(this)
         Fragment.setOnClickListener(this)
-        btnNotification.setOnClickListener(this)
+
         btnMoreTimeCreateNotification.setOnClickListener(this)
     }
 
@@ -66,14 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     val intent = Intent(this, FragmentWithOutClearState::class.java)
                     startActivity(intent)
                 }
-                R.id.btnNotification -> {
-                    val intent = Intent(this, NotificationClass::class.java)
-                    startActivity(intent)
-                }
-                R.id.btnNotificationTesting -> {
-                    val intent = Intent(this, TestingNotification::class.java)
-                    startActivity(intent)
-                }
+
                 R.id.btnOneORMoreTimeCreateNotification->{
                     val intent=Intent(this,GenerateNotification::class.java)
                     startActivity(intent)
