@@ -9,6 +9,14 @@ import android.app.NotificationManager
 import android.os.Build
 import android.util.Log
 import java.util.*
+import androidx.test.core.app.ApplicationProvider.getApplicationContext
+
+import android.media.RingtoneManager
+
+import android.media.Ringtone
+import android.net.Uri
+import androidx.test.core.app.ApplicationProvider
+import java.lang.Exception
 
 
 class MyScheduleNotification : BroadcastReceiver() {
@@ -22,9 +30,22 @@ class MyScheduleNotification : BroadcastReceiver() {
     }
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        Log.i("paras", "onReceive:dsfsdg ")
-        val not = GenerateNotification()
-        not.sendAndRequestResponse(context)
+
+        Log.i("paras", "recever: ${ intent?.getBooleanExtra("Notification_GoBack",false)}")
+
+        try {
+            val notification: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+            val r = RingtoneManager.getRingtone(
+                ApplicationProvider.getApplicationContext<Context>(),
+                notification
+            )
+            r.play()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+//        val not = GenerateNotification()
+//        not.sendAndRequestResponse(context)
         val notificationManager: NotificationManager =
             context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notification: Notification? = intent?.getParcelableExtra(NOTIFICATION)
@@ -49,7 +70,9 @@ class MyScheduleNotification : BroadcastReceiver() {
             "paras",
             "onReceive: $id --> ${intent?.getStringExtra(MyScheduleNotification.NOTIFICATION_ID)}"
         )
+
         notificationManager.notify(id, notification)
+        intent?.putExtra("Notification_GoBack",true)
 //        } catch (e: NumberFormatException) {
 //
 //        }

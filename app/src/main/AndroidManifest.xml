@@ -19,6 +19,7 @@
     <uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -32,6 +33,7 @@
 
         <activity
             android:name=".GenerateNotification"
+            android:launchMode="singleTop"
             android:exported="true" />
         <activity
             android:name=".FragmentWithOutClearState"
@@ -82,6 +84,12 @@
 
         <receiver
             android:name=".MyScheduleNotification"
+            android:enabled="true"
+            android:exported="true">
+
+        </receiver>
+        <receiver
+            android:name=".ReceiverDailyNotification"
             android:enabled="true"
             android:exported="true">
 

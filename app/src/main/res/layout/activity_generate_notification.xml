@@ -6,7 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".GenerateNotification">
 
+    <RadioGroup
+        android:id="@+id/radioGroupNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartDate">
 
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SpecificTime"
+            android:checked="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Odd Day"
+            app:layout_constraintStart_toEndOf="@id/radio1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next to next day"
+            app:layout_constraintStart_toEndOf="@id/radio2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/btnStartDate"
@@ -14,78 +48,86 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:text="Select Start Date"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupNotification" />
+
     <Button
         android:id="@+id/btnEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select End Date"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnStartDate"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnStartDate" />
+
     <Button
         android:id="@+id/btnSelectFirstTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select First Times"
 
-        app:layout_constraintTop_toBottomOf="@id/btnEndDate"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnEndDate" />
+
     <Button
         android:id="@+id/btnSelectSecondTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:text="Select Second Times"
-        app:layout_constraintTop_toBottomOf="@id/btnSelectFirstTime"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnSelectFirstTime" />
+
     <Button
         android:id="@+id/btnSelectThirdTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Third Times"
-        app:layout_constraintTop_toBottomOf="@id/btnSelectSecondTime"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnSelectSecondTime" />
 
     <TextView
         android:id="@+id/tvShowStartDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btnStartDate"
         app:layout_constraintBaseline_toBaselineOf="@id/btnStartDate"
+        app:layout_constraintStart_toEndOf="@id/btnStartDate"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvShowEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btnEndDate"
         app:layout_constraintBaseline_toBaselineOf="@id/btnEndDate"
+        app:layout_constraintStart_toEndOf="@id/btnEndDate"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvFirstTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btnSelectFirstTime"
         app:layout_constraintBaseline_toBaselineOf="@id/btnSelectFirstTime"
+        app:layout_constraintStart_toEndOf="@id/btnSelectFirstTime"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvSecondTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btnSelectSecondTime"
         app:layout_constraintBaseline_toBaselineOf="@id/btnSelectSecondTime"
+        app:layout_constraintStart_toEndOf="@id/btnSelectSecondTime"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvThirdTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btnSelectThirdTime"
         app:layout_constraintBaseline_toBaselineOf="@id/btnSelectThirdTime"
+        app:layout_constraintStart_toEndOf="@id/btnSelectThirdTime"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -93,8 +135,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@id/btnSelectThirdTime"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnSelectThirdTime" />
+
+    <Button
+        android:id="@+id/CancleNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancle All notification"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDailyNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSubmit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

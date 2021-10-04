@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telecom.Call.Details.can
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -31,6 +32,11 @@ import com.android.volley.RequestQueue
 import com.android.volley.Request
 
 import com.android.volley.toolbox.Volley
+import com.main.kotlin.MyScheduleNotification.Companion.NOTIFICATION
+import java.time.LocalDateTime
+import java.time.ZoneId
+import android.app.PendingIntent
+
 
 class GenerateNotification : AppCompatActivity(), View.OnClickListener {
 
@@ -45,6 +51,15 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
     lateinit var tvSecondTime: TextView
     lateinit var tvThirdTime: TextView
     lateinit var btnSubmit: Button
+    lateinit var btnCancleNotification: Button
+    lateinit var btnDailyNotification: Button
+    lateinit var radioNotification: RadioButton
+    lateinit var radioOddDay: RadioButton
+    lateinit var radioNextToNextDay: RadioButton
+    var dataFromIntent = false
+
+    var radioSelected = 1
+
 
     var dateLong: Long = 0L
 
@@ -60,6 +75,10 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_generate_notification)
+        if (intent != null && intent?.getBooleanExtra("Notification_GoBack", false) != null) {
+            dataFromIntent = intent?.getBooleanExtra("Notification_GoBack", false)!!
+        }
+        Log.i("paras", "onCreategoback: ${dataFromIntent}")
         initAllView()
 
         tvShowAll.addTextChangedListener(object : TextWatcher {
@@ -68,18 +87,17 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
+                tvEndDate.text = ""
             }
 
             override fun afterTextChanged(p0: Editable?) {
 
-                if (!tvEndDate.text.isEmpty()) {
-                    tvEndDate.text = ""
-                }
+
             }
 
         })
     }
+
 
     fun initAllView() {
         btnStartDate = findViewById(R.id.btnStartDate)
@@ -93,6 +111,13 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         tvSecondTime = findViewById(R.id.tvSecondTime)
         tvThirdTime = findViewById(R.id.tvThirdTime)
         btnSubmit = findViewById(R.id.btnSubmit)
+        btnCancleNotification = findViewById(R.id.CancleNotification)
+        btnDailyNotification = findViewById(R.id.btnDailyNotification)
+        radioNotification = findViewById(R.id.radio1)
+        radioOddDay = findViewById(R.id.radio2)
+        radioNextToNextDay = findViewById(R.id.radio3)
+
+
 
         btnSelectTime.setOnClickListener(this)
         btnSelectSecondTime.setOnClickListener(this)
@@ -100,7 +125,11 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         btnSubmit.setOnClickListener(this)
         btnStartDate.setOnClickListener(this)
         btnEndDate.setOnClickListener(this)
-
+        btnCancleNotification.setOnClickListener(this)
+        btnDailyNotification.setOnClickListener(this)
+        radioOddDay.setOnClickListener(this)
+        radioNextToNextDay.setOnClickListener(this)
+        radioNotification.setOnClickListener(this)
     }
 
 
@@ -216,7 +245,6 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         return dates
     }
 
-
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onClick(v: View?) {
 
@@ -247,6 +275,34 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
                 R.id.btnEndDate -> {
                     selectEndDate()
                 }
+                R.id.CancleNotification -> {
+                    val notificationIntent = Intent(this, MyScheduleNotification::class.java)
+                    cancelAlarm(this, notificationIntent, 10001)
+
+                    for (i in 20..80) {
+                        cancelAlarm(this, notificationIntent, i)
+                    }
+                }
+                R.id.btnDailyNotification -> {
+//                    val calendar:Calendar= Calendar.getInstance()
+//                    val currentDate=calendar.time
+                    val date =
+                        SimpleDateFormat("yyyy-MM-dd 00:00:00", Locale.getDefault()).format(Date())
+                    val calDate = setAlarmCalender(date)
+                    calDate.add(Calendar.DAY_OF_MONTH, 1)
+                    Log.i("date", "onClick:   ${calDate.time}")
+
+                    scheduleNotificationForDaily(calDate.timeInMillis)
+                }
+                R.id.radio1 -> {
+                    radioSelected = 1
+                }
+                R.id.radio2 -> {
+                    radioSelected = 2
+                }
+                R.id.radio3 -> {
+                    radioSelected = 3
+                }
 
             }
 
@@ -254,7 +310,7 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun setAlarmCalender(setDateTime: String): Calendar {
+    fun setAlarmCalender(setDateTime: String): Calendar {
         Log.i("Date and Time", "setAlarmCalender: $setDateTime")
         val mCalendar1: Calendar = Calendar.getInstance()
         try {
@@ -267,30 +323,52 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun getNotification(): Notification {
-        val intent = Intent(this, GenerateNotification::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
+        val intent = Intent(this, GenerateNotification::class.java)
+        intent.putExtra("Notification_GoBack", true)
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
+
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+        //  pendingIntent.send(this,1,intent)
+
+        val notificationIntent = Intent(applicationContext, GenerateNotification::class.java)
+        notificationIntent.putExtra("Notification_GoBack", true)
+        notificationIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        val pendingNotificationIntent = PendingIntent.getActivity(
+            applicationContext,
+            0,
+            notificationIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT
+        )
+//        notification.flags = notification.flags or Notification.FLAG_AUTO_CANCEL
+//        notification.setLatestEventInfo(
+//            applicationContext,
+//            notificationTitle,
+//            notificationMessage,
+//            pendingNotificationIntent
+//        )
 
         val icon = BitmapFactory.decodeResource(applicationContext.resources, R.drawable.nature)
         val builder: NotificationCompat.Builder =
             NotificationCompat.Builder(this, default_notification_channel_id)
+
         builder.setContentTitle("Scheduled Notification -> $dateLong")
         builder.setSmallIcon(R.drawable.ic_bulb)
         builder.setLargeIcon(icon)
         builder.setContentText("parasKansagara")
-        builder.setContentIntent(pendingIntent)
+        builder.setContentIntent(pendingNotificationIntent)
         builder.setPriority(NotificationCompat.PRIORITY_MAX)
         builder.setAutoCancel(true)
+        builder.setVibrate(longArrayOf(1000, 1000, 1000, 1000, 1000))
         builder.setChannelId(NOTIFICATION_CHANNEL_ID)
         return builder.build()
 
     }
 
     fun scheduleNotification(delay: Long) {
-        Log.i("paras", "scheduleNotification: $delay")
+        val longToDate = SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(Date(delay))
+        Log.i("paras", "scheduleNotification: $delay   longToDate::$longToDate")
         val notificationIntent = Intent(this, MyScheduleNotification::class.java)
-        notificationIntent.putExtra(MyScheduleNotification.NOTIFICATION_ID, delay.toString())
+        notificationIntent.putExtra("Notification_GoBack", true)
         notificationIntent.putExtra(MyScheduleNotification.NOTIFICATION, getNotification())
         notificationIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
         notificationIntent.addFlags(Intent.FLAG_RECEIVER_NO_ABORT)
@@ -307,6 +385,28 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
             PendingIntent.FLAG_UPDATE_CURRENT
         )
 
+
+        val alarmManager = (getSystemService(Context.ALARM_SERVICE) as AlarmManager)
+        alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, delay, pendingIntent)
+
+    }
+
+    fun scheduleNotificationForDaily(delay: Long) {
+        Log.i("paras", "scheduleNotification: $delay")
+        val notificationIntent = Intent(this, ReceiverDailyNotification::class.java)
+        notificationIntent.putExtra(ReceiverDailyNotification.NOTIFICATION, getNotification())
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_NO_ABORT)
+        notificationIntent.addFlags(Intent.FLAG_RECEIVER_REPLACE_PENDING)
+        notificationIntent.addFlags(Intent.FLAG_FROM_BACKGROUND)
+
+        val pendingIntent = PendingIntent.getBroadcast(
+            this,
+            10001,
+            notificationIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT
+        )
+
         val alarmManager = (getSystemService(Context.ALARM_SERVICE) as AlarmManager)
         alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, delay, pendingIntent)
 
@@ -318,9 +418,11 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         var listOfDate = ArrayList<String>()
         var listOfTimeSelect = ArrayList<String>()
 
-        if (tvShowAll.text.isEmpty()) {
+        if (tvShowAll.text.toString() == "") {
+
             Toast.makeText(this, "Please select Start Date...", Toast.LENGTH_SHORT).show()
-        } else if (tvEndDate.text.isEmpty()) {
+        } else if (tvEndDate.text.toString() == "") {
+
             Toast.makeText(this, "Please Select End Date", Toast.LENGTH_SHORT).show()
         } else {
             listOfDate = getDatesBetween(first, second)
@@ -338,7 +440,6 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
 
     }
 
-
     private fun updateLabel(calendar: Calendar, view: TextView) {
         val myFormat = "yyyy-MM-dd" //In which you need put here
         val sdf = SimpleDateFormat(myFormat, Locale.getDefault())
@@ -349,7 +450,7 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
     private fun updateTime(calendar: Calendar, view: TextView) {
         val format = "HH:mm"
         val sdf = SimpleDateFormat(format, Locale.getDefault())
-        view.text = sdf.format(calendar.time)+":00"
+        view.text = sdf.format(calendar.time) + ":00"
     }
 
     private fun clearAllTextView() {
@@ -365,35 +466,42 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         listOfDate: ArrayList<String>,
         listOfTime: ArrayList<String>
     ) {
-        for (i in 0 until listOfDate.size) {
-            for (j in 0 until listOfTime.size) {
+        for (i in 0..listOfDate.size - 1) {
+            for (j in 0..listOfTime.size - 1) {
 
                 val dateTime = listOfDate[i] + " " + listOfTime[j]
                 val dateTimeLong = setAlarmCalender(dateTime).timeInMillis
 
                 Log.i("paras", "createNotification: $dateTime  -- ${dateTimeLong}")
 
-                scheduleNotification(dateTimeLong)
-            }
-        }
+                when {
+                    i % radioSelected == 0 -> {
+                        scheduleNotification(dateTimeLong)
 
+                    }
+                }
+            }
+
+        }
     }
 
-    private fun getAllTime(): ArrayList<String> {
+    fun getAllTime(): ArrayList<String> {
         val list = ArrayList<String>()
 
-        if (!tvFirstTime.text.isEmpty()) {
+        if (tvFirstTime.text.toString() != "") {
+
             list.add(tvFirstTime.text.toString())
         }
-        if (!tvSecondTime.text.isEmpty()) {
+        if (tvSecondTime.text.toString() != "") {
             list.add(tvSecondTime.text.toString())
         }
-        if (!tvThirdTime.text.isEmpty()) {
+        if (tvThirdTime.text.toString() != "") {
             list.add(tvThirdTime.text.toString())
         }
 
         return list
     }
+
     fun sendAndRequestResponse(context: Context?) {
 
         //RequestQueue initialized
@@ -407,4 +515,28 @@ class GenerateNotification : AppCompatActivity(), View.OnClickListener {
         ) { error -> Log.i("TAG", "Error :$error") }
         mRequestQueue!!.add(mStringRequest)
     }
+
+    fun cancelAlarm(context: Context, intent: Intent?, notificationId: Int) {
+        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val pendingIntent = PendingIntent.getBroadcast(
+            context,
+            notificationId,
+            intent,
+            PendingIntent.FLAG_UPDATE_CURRENT
+        )
+        alarmManager.cancel(pendingIntent)
+    } //    Intent alarmIntent = new Intent(getApplicationContext(), AlarmReceiver.class);
+    //    AlarmUtil.setAlarm(getApplicationContext(), alarmIntent, reminder.getId(), mCalendar);
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (dataFromIntent) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        } else {
+            finish()
+        }
+
+    }
+
 }
