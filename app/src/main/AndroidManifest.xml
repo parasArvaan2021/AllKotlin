@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -30,11 +30,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".BottomNavWithFABButton"
+            android:theme="@style/BottomNavigation"
+            android:exported="true" />
+        <activity
+            android:name=".RoomDataBaseExample"
+            android:exported="true" />
         <activity
             android:name=".GenerateNotification"
-            android:launchMode="singleTop"
-            android:exported="true" />
+            android:exported="true"
+            android:launchMode="singleTop" />
         <activity
             android:name=".FragmentWithOutClearState"
             android:exported="false" />
@@ -85,15 +91,11 @@
         <receiver
             android:name=".MyScheduleNotification"
             android:enabled="true"
-            android:exported="true">
-
-        </receiver>
+            android:exported="true" />
         <receiver
             android:name=".ReceiverDailyNotification"
             android:enabled="true"
-            android:exported="true">
-
-        </receiver>
+            android:exported="true" />
     </application>
 
 </manifest>

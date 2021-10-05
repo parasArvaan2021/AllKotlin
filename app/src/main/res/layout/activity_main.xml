@@ -74,11 +74,27 @@
         android:id="@+id/btnOneORMoreTimeCreateNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
         android:text="ONe Or More Time Notification Create"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/FragmentExampleWithoutStateClear" />
+    <Button
+        android:id="@+id/btnRoomDataBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room DataBase Example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOneORMoreTimeCreateNotification" />
+
+    <Button
+        android:id="@+id/btnBottomNavigationWithFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottom Navigation With Floating Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRoomDataBase"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

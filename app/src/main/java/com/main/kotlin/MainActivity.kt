@@ -22,8 +22,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val EmbieMedication: Button = findViewById(R.id.EmbieMedication)
         val LocalFileOpen: Button = findViewById(R.id.LocalFileOpen)
         val Fragment: Button = findViewById(R.id.FragmentExampleWithoutStateClear)
-
-        val btnMoreTimeCreateNotification:Button=findViewById(R.id.btnOneORMoreTimeCreateNotification)
+        val btnMoreTimeCreateNotification: Button =
+            findViewById(R.id.btnOneORMoreTimeCreateNotification)
+        val btnRoomDataBase: Button = findViewById(R.id.btnRoomDataBase)
+        val btnBottomNavWithFloating:Button=findViewById(R.id.btnBottomNavigationWithFloatingButton)
 
 
         btn_ripple_effect.setOnClickListener(this)
@@ -33,46 +35,53 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         EmbieMedication.setOnClickListener(this)
         LocalFileOpen.setOnClickListener(this)
         Fragment.setOnClickListener(this)
+        btnBottomNavWithFloating.setOnClickListener(this)
 
         btnMoreTimeCreateNotification.setOnClickListener(this)
+        btnRoomDataBase.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
+        var intent: Intent
         if (v != null) {
             when (v.id) {
                 R.id.btn_ripple_effect -> {
-                    val intent = Intent(this, RippleEffect::class.java)
+                    intent = Intent(this, RippleEffect::class.java)
                     startActivity(intent)
                 }
                 R.id.btn_custom_progress -> {
-                    val intent = Intent(this, CustomProgress::class.java)
+                    intent = Intent(this, CustomProgress::class.java)
                     startActivity(intent)
                 }
                 R.id.btn_embie_design -> {
-                    val intent = Intent(this, EmbieDesign::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, EmbieDesign::class.java))
                 }
                 R.id.BottomNavigation -> {
-                    val intent = Intent(this, BottomNavigation::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, BottomNavigation::class.java))
                 }
                 R.id.EmbieMedication -> {
-                    val intent = Intent(this, Medication::class.java)
-                    startActivity(intent)
+
+                    startActivity(Intent(this, Medication::class.java))
                 }
                 R.id.LocalFileOpen -> {
-                    val intent = Intent(this, ChooseFile::class.java)
-                    startActivity(intent)
+
+                    startActivity(Intent(this, ChooseFile::class.java))
                 }
                 R.id.FragmentExampleWithoutStateClear -> {
-                    val intent = Intent(this, FragmentWithOutClearState::class.java)
-                    startActivity(intent)
+
+                    startActivity(Intent(this, FragmentWithOutClearState::class.java))
+
                 }
 
-                R.id.btnOneORMoreTimeCreateNotification->{
-                    val intent=Intent(this,GenerateNotification::class.java)
-                    intent.putExtra("Notification_GoBack",false)
-                    startActivity(intent)
+                R.id.btnOneORMoreTimeCreateNotification -> {
+
+                    startActivity(Intent(this, GenerateNotification::class.java))
+                }
+                R.id.btnRoomDataBase -> {
+                    startActivity(Intent(this, RoomDataBaseExample::class.java))
+                }
+                R.id.btnBottomNavigationWithFloatingButton->{
+                        startActivity(Intent(this,BottomNavWithFABButton::class.java))
                 }
             }
         }
@@ -91,7 +100,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         this.doubleBackToExitPressedOnce = true
         Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show()
 
-        Handler(Looper.getMainLooper()).postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 3000)
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
+            doubleBackToExitPressedOnce = false
+        }, 3000)
     }
 
 
