@@ -9,6 +9,7 @@ import android.os.Looper
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.main.kotlin.fragmentwithbottomnavigation.ui.BottomNavigationWithFragment
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -24,8 +25,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val Fragment: Button = findViewById(R.id.FragmentExampleWithoutStateClear)
         val btnMoreTimeCreateNotification: Button =
             findViewById(R.id.btnOneORMoreTimeCreateNotification)
-        val btnRoomDataBase: Button = findViewById(R.id.btnRoomDataBase)
-        val btnBottomNavWithFloating:Button=findViewById(R.id.btnBottomNavigationWithFloatingButton)
+        val btnBottomNavWithFloating: Button =
+            findViewById(R.id.btnBottomNavigationWithFloatingButton)
+        val btnFragmentWithBottomNavigation: Button =
+            findViewById(R.id.btnFragmentWithBottomNavigation)
 
 
         btn_ripple_effect.setOnClickListener(this)
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnBottomNavWithFloating.setOnClickListener(this)
 
         btnMoreTimeCreateNotification.setOnClickListener(this)
-        btnRoomDataBase.setOnClickListener(this)
+        btnFragmentWithBottomNavigation.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -77,11 +80,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                     startActivity(Intent(this, GenerateNotification::class.java))
                 }
-                R.id.btnRoomDataBase -> {
-                    startActivity(Intent(this, RoomDataBaseExample::class.java))
+
+                R.id.btnBottomNavigationWithFloatingButton -> {
+                    startActivity(Intent(this, BottomNavWithFABButton::class.java))
                 }
-                R.id.btnBottomNavigationWithFloatingButton->{
-                        startActivity(Intent(this,BottomNavWithFABButton::class.java))
+                R.id.btnFragmentWithBottomNavigation->{
+                    startActivity(Intent(this, BottomNavigationWithFragment::class.java))
                 }
             }
         }

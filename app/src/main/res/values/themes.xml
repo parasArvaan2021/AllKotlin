@@ -15,7 +15,11 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="BottomNavigation" parent="Theme.MaterialComponents.Light">
+    <style name="BottomNavigation" parent="Theme.MaterialComponents.Light"/>
+
+    <style name="Theme.NoActionBar" parent="Theme.AllKotlin">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
 
     </style>
 </resources>

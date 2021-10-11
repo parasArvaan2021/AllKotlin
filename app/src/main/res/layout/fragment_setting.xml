@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tvfrgSettingHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvfrgSettingVideoPlayback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:text="Video playback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toTopOf="@id/tvfrgSettingMobileData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfrgSettingHeading" />
+
+    <TextView
+        android:id="@+id/tvfrgSettingMobileData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Mobile Data Using"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toTopOf="@id/viewFrgSettingLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfrgSettingVideoPlayback" />
+
+    <ImageView
+        android:id="@+id/ivFrgSettingMobileDataArraw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvfrgSettingMobileData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvfrgSettingMobileData" />
+
+    <View
+        android:id="@+id/viewFrgSettingLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvfrgSettingDownloads"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfrgSettingMobileData" />
+
+    <TextView
+        android:id="@+id/tvfrgSettingDownloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Downloads"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toTopOf="@id/tvFrgSettingWifi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewFrgSettingLine" />
+
+    <TextView
+        android:id="@+id/tvFrgSettingWifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Wi-fi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintBottom_toTopOf="@id/tvFrgSettingVideoQuality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvfrgSettingDownloads" />
+
+    <TextView
+        android:id="@+id/tvFrgSettingVideoQuality"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Video Quality"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFrgSettingWifi" />
+
+    <TextView
+        android:id="@+id/tvFrgSettingDeleteAllDownload"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Delete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFrgSettingVideoQuality" />
+
+    <ImageView
+        android:id="@+id/ivFrgSettingDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvFrgSettingDeleteAllDownload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFrgSettingDeleteAllDownload" />
+
+    <ImageView
+        android:id="@+id/ivFrgSettingVideoQualityArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintBottom_toBottomOf="@id/tvFrgSettingVideoQuality"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFrgSettingVideoQuality" />
+
+    <Switch
+        android:id="@+id/switchSettingWifi"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:buttonTint="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_30sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tvFrgSettingWifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFrgSettingWifi"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

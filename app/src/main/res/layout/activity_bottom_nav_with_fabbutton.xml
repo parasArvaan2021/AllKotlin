@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="-10dp"
         android:layout_gravity="bottom"
-
         app:fabAlignmentMode="center"
         android:backgroundTint="@color/white"
         android:paddingEnd="15dp"

@@ -31,12 +31,15 @@
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".BottomNavWithFABButton"
-            android:theme="@style/BottomNavigation"
-            android:exported="true" />
+            android:name=".fragmentwithbottomnavigation.ui.BottomNavigationWithFragment"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar"
+            android:label="@string/title_activity_bottom_navigation_with_fragment" />
         <activity
-            android:name=".RoomDataBaseExample"
-            android:exported="true" />
+            android:name=".BottomNavWithFABButton"
+            android:exported="true"
+            android:theme="@style/BottomNavigation" />
+
         <activity
             android:name=".GenerateNotification"
             android:exported="true"

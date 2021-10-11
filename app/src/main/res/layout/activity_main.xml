@@ -78,14 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/FragmentExampleWithoutStateClear" />
-    <Button
-        android:id="@+id/btnRoomDataBase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Room DataBase Example"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnOneORMoreTimeCreateNotification" />
+
 
     <Button
         android:id="@+id/btnBottomNavigationWithFloatingButton"
@@ -94,7 +87,16 @@
         android:text="Bottom Navigation With Floating Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnRoomDataBase"/>
+        app:layout_constraintTop_toBottomOf="@id/btnOneORMoreTimeCreateNotification"/>
+
+    <Button
+        android:id="@+id/btnFragmentWithBottomNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fragment with Bottom Navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBottomNavigationWithFloatingButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
