@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".fragmentwithbottomnavigation.ui.favorite.FavoriteFragment">
+    tools:context=".icst.favorite.FavoriteFragment">
 
 
     <include
@@ -16,7 +16,8 @@
         android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvFrgFavouriteHeading"/>
 
 
     <TextView

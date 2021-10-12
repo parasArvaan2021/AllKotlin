@@ -31,24 +31,40 @@
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".fragmentwithbottomnavigation.ui.BottomNavigationWithFragment"
+            android:name=".icst.DashboardActivity"
             android:exported="true"
             android:theme="@style/Theme.NoActionBar"
             android:label="@string/title_activity_bottom_navigation_with_fragment" />
         <activity
-            android:name=".BottomNavWithFABButton"
+            android:name=".activity.BottomNavWithFABButton"
             android:exported="true"
             android:theme="@style/BottomNavigation" />
+        <activity
+            android:name=".icst.spleshscreen.SpleshScreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".icst.signin.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".icst.signup.RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
+            android:name=".icst.forgotpassword.ForgotPasswordActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
 
         <activity
-            android:name=".GenerateNotification"
+            android:name=".activity.GenerateNotification"
             android:exported="true"
             android:launchMode="singleTop" />
         <activity
-            android:name=".FragmentWithOutClearState"
+            android:name=".activity.FragmentWithOutClearState"
             android:exported="false" />
         <activity
-            android:name=".UrlAndDownload"
+            android:name=".activity.UrlAndDownload"
             android:exported="false" />
 
         <provider
@@ -62,27 +78,27 @@
         </provider>
 
         <activity
-            android:name=".ChooseLocalFile"
+            android:name=".activity.ChooseLocalFile"
             android:exported="false" />
         <activity
-            android:name=".ChooseFile"
+            android:name=".activity.ChooseFile"
             android:exported="false" />
         <activity
-            android:name=".Medication"
+            android:name=".activity.Medication"
             android:exported="false" />
         <activity
-            android:name=".EmbieMedication"
+            android:name=".activity.EmbieMedication"
             android:exported="false" />
         <activity
-            android:name=".BottomNavigation"
+            android:name=".activity.BottomNavigation"
             android:exported="false" />
         <activity
-            android:name=".EmbieDesign"
+            android:name=".activity.EmbieDesign"
             android:exported="true" />
-        <activity android:name=".CustomProgress" />
-        <activity android:name=".RippleEffect" />
+        <activity android:name=".activity.CustomProgress" />
+        <activity android:name=".activity.RippleEffect" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,11 +108,11 @@
         </activity>
 
         <receiver
-            android:name=".MyScheduleNotification"
+            android:name=".receiver.MyScheduleNotification"
             android:enabled="true"
             android:exported="true" />
         <receiver
-            android:name=".ReceiverDailyNotification"
+            android:name=".receiver.ReceiverDailyNotification"
             android:enabled="true"
             android:exported="true" />
     </application>

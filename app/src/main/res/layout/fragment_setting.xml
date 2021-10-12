@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_30sdp"
-        android:src="@drawable/ic_baseline_delete_24"
+        android:src="@drawable/ic_delete"
         app:layout_constraintBottom_toBottomOf="@id/tvFrgSettingDeleteAllDownload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvFrgSettingDeleteAllDownload" />

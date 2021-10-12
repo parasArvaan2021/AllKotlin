@@ -195,7 +195,36 @@
     </string-array>
     <string name="title_activity_bottom_navigation_with_fragment">BottomNavigationWithFragment
     </string>
+
+
+    <string name="login_forgot_password">Forgotten your email or password?</string>
+    <string name="login_btn_sign_in">Sign in</string>
+    <string name="login_btn_sign_up">Sign up</string>
+
+    <string name="forgotpassword_btn_send_email">Send Email</string>
+    <string name="forgotpassword_heading">Forgot your password</string>
+    <string name="forgotpassword_sub_heading">Type in your email below to reset  your password</string>
+    <string name="register_welcome">Welcome</string>
+    <string name="register_joining_msg">Joining ICST.TV is easy</string>
+    <string name="register_already_member">Already a member?</string>
+    <string name="register_terms_and_condition">By submitting to this you agree with our <b><a href="https://facebook.com">\nterms and condition</a></b></string>
+    <string name="setting_mobile_data_usage">Mobile data usage</string>
+    <string name="setting_video_playblack">Video PlayBlack</string>
+    <string name="setting_wifi">Wi-fi only</string>
+    <string name="setting_downloads">Downloads</string>
+    <string name="setting_videoquality">Video quality</string>
+    <string name="setting_delete">Delete all downloads</string>
+    <string name="bottom_navigation_setting">Setting</string>
+    <string name="bottom_navigation_favorite">Favorites</string>
+    <string name="bottom_navigation_downloads">downloads</string>
+    <string name="bottom_navigation_home">home</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="frghome_image_des">Professor Beverley Hunt response to growing concerns  about blood clots in acute COVID-19 infection and long  COVID.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_videoplayer">VideoPlayerFragment</string>
 </resources>

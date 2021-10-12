@@ -22,4 +22,9 @@
         <item name="android:windowFullscreen">true</item>
 
     </style>
+
+    <style name="BottomNavigation.Text" >
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="fontFamily">@font/open_sans_regular</item>
+    </style>
 </resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".icst.signup.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/ivRegisterLogo"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="@dimen/_115sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintBottom_toTopOf="@id/tvRegisterWelcom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRegisterWelcom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/open_sans_bold"
+            android:gravity="center"
+            android:text="@string/register_welcome"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@id/tvRegisterJoingMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivRegisterLogo" />
+
+        <TextView
+            android:id="@+id/tvRegisterJoingMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/register_joining_msg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintBottom_toTopOf="@id/etRegisterFirstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterWelcom" />
+
+        <EditText
+            android:id="@+id/etRegisterFirstName"
+            style="@style/commonEditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="First name"
+            app:layout_constraintBottom_toTopOf="@id/etRegisterLastName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterJoingMsg" />
+
+        <EditText
+            android:id="@+id/etRegisterLastName"
+            style="@style/commonEditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Last name"
+            app:layout_constraintBottom_toTopOf="@id/etRegisterEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterFirstName" />
+
+        <EditText
+            android:id="@+id/etRegisterEmail"
+            style="@style/commonEditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Email"
+            app:layout_constraintBottom_toTopOf="@id/etRegisterPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterLastName" />
+
+        <EditText
+            android:id="@+id/etRegisterPassword"
+            style="@style/commonEditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Password"
+            app:layout_constraintBottom_toTopOf="@id/etRegisterReEnterPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterEmail" />
+
+        <EditText
+            android:id="@+id/etRegisterReEnterPassword"
+            style="@style/commonEditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="Re-enter password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterPassword" />
+
+        <TextView
+            android:id="@+id/tvRegisterAlreadyMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:fontFamily="@font/open_sans_regular"
+            android:text="@string/register_already_member"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toTopOf="@id/btnRegisterSignin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterReEnterPassword" />
+
+        <TextView
+            android:id="@+id/btnRegisterSignup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/register_background_button"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Sign up"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@id/tvRegisterTermsAndCondition"
+            app:layout_constraintEnd_toStartOf="@id/btnRegisterSignin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterAlreadyMember" />
+
+        <TextView
+            android:id="@+id/btnRegisterSignin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/register_border_button"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Sign in"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintBottom_toTopOf="@id/tvRegisterTermsAndCondition"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnRegisterSignup"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterAlreadyMember" />
+
+        <TextView
+            android:id="@+id/tvRegisterTermsAndCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:fontFamily="@font/open_sans_regular"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:text="@string/register_terms_and_condition"
+            android:textColor="@color/gray"
+            android:textColorLink="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRegisterSignup" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

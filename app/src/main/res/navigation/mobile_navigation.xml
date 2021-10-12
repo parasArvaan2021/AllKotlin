@@ -7,34 +7,40 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.main.kotlin.fragmentwithbottomnavigation.ui.home.list.HomeFragment"
+        android:name="com.main.kotlin.icst.home.list.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/navigation_favourite"
-        android:name="com.main.kotlin.fragmentwithbottomnavigation.ui.favorite.FavoriteFragment"
+        android:name="com.main.kotlin.icst.favorite.FavoriteFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_favorite" />
 
 
     <fragment
         android:id="@+id/navigation_recently_added"
-        android:name="com.main.kotlin.fragmentwithbottomnavigation.ui.recentlyadded.RecentlyAddedFragment"
+        android:name="com.main.kotlin.icst.recentlyadded.RecentlyAddedFragment"
         android:label="Recently Added"
         tools:layout="@layout/fragment_recently_added" />
 
 
     <fragment
         android:id="@+id/navigation_download"
-        android:name="com.main.kotlin.fragmentwithbottomnavigation.ui.download.DownloadFragment"
+        android:name="com.main.kotlin.icst.download.DownloadFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_download" />
 
     <fragment
         android:id="@+id/navigation_setting"
-        android:name="com.main.kotlin.fragmentwithbottomnavigation.ui.setting.SettingFragment"
+        android:name="com.main.kotlin.icst.setting.SettingFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/navVideoPlayerFragment"
+        android:name="com.main.kotlin.icst.home.videoplayer.VideoPlayerFragment"
+        android:label="@string/title_videoplayer"
+        tools:layout="@layout/fragment_video_player" />
+
 
 
 </navigation>
