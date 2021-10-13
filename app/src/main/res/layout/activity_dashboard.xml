@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:animateLayoutChanges="false"
+        app:itemHorizontalTranslationEnabled="false"
         app:itemIconSize="@dimen/_15sdp"
         app:itemIconTint="@color/white"
+        app:itemTextAppearanceActive="@style/BottomNavigation.Text"
         app:itemTextAppearanceInactive="@style/BottomNavigation.Text"
         app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"

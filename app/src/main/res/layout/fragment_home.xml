@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,112 +13,135 @@
         layout="@layout/layout_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toTopOf="@id/nsvParent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ivFrgHomeDisplay"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/ivFrgHomeDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_180sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:scaleType="fitXY"
-        android:src="@drawable/nature1"
-        app:layout_constraintBottom_toTopOf="@id/recycleFrgHomeContinueWatching"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolBarFrgHome" />
-
-    <!-- <androidx.core.widget.NestedScrollView
-         android:id="@+id/scrollFrgHomeRecycler"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         app:layout_constraintTop_toBottomOf="@id/ivFrgHomeDisplay"
-         app:layout_constraintStart_toStartOf="parent"
-         android:fillViewport="true"
-         android:overScrollMode="never"
-         android:scrollbars="none"
-         app:layout_constraintEnd_toEndOf="parent">-->
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleFrgHomeContinueWatching"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsvParent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:overScrollMode="never"
-        app:layout_constraintTop_toBottomOf="@id/ivFrgHomeDisplay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <!--    </androidx.core.widget.NestedScrollView>-->
-    <TextView
-        android:id="@+id/tvFrgHomeWatch"
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_34sdp"
-       android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
-        android:background="@drawable/register_border_button"
-        android:drawableStart="@drawable/ic_play"
-        android:fontFamily="@font/open_sans_regular"
-        android:gravity="center"
-        android:paddingStart="@dimen/_10sdp"
-        android:text="Watch"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12sdp"
-        app:layout_constraintBottom_toBottomOf="@id/ivFrgHomeDisplay"
-        app:layout_constraintEnd_toEndOf="@id/ivFrgHomeDisplay"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/ivFrgHomeDisplay"
-        app:layout_constraintTop_toTopOf="@id/ivFrgHomeDisplay"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/tvFrgHomeEpisode"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:fontFamily="@font/open_sans_regular"
-        android:text="New Episode"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_20sdp"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgHomeImageHeading"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/ivFrgHomeDisplay" />
+        app:layout_constraintTop_toBottomOf="@id/toolBarFrgHome">
 
-    <TextView
-        android:id="@+id/tvFrgHomeImageHeading"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:fontFamily="@font/open_sans_semibold"
-        android:text="Professor Beverley Hunt Long Covid"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_17sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFrgHomeEpisode"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgHomeImageDescription"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvFrgHomeImageDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:fontFamily="@font/open_sans_regular"
-        android:text="@string/frghome_image_des"
-        android:textColor="#DAD7D3"
-        android:textSize="@dimen/_10sdp"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgHomeWatch"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFrgHomeImageHeading" />
+            <ImageView
+                android:id="@+id/ivFrgHomeDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sunset"
+                app:layout_constraintBottom_toTopOf="@id/recycleFrgHomeContinueWatching"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
+            <LinearLayout
+                android:id="@+id/llFrgHomeWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/register_border_button"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_25sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_25sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="@id/ivFrgHomeDisplay"
+                app:layout_constraintStart_toStartOf="@id/ivFrgHomeDisplay"
+                app:layout_constraintTop_toBottomOf="@id/tvFrgHomeImageDescription">
 
+                <ImageView
+                    android:id="@+id/ivFrgHomeWatch"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:src="@drawable/ic_play" />
+
+                <TextView
+                    android:id="@+id/tvFrgHomeWatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:gravity="left|center"
+                    android:text="@string/frgHomeButtonWatch"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvFrgHomeEpisode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/frgHomeImageText"
+                android:textColor="#215C6A"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivFrgHomeDisplay" />
+
+            <TextView
+                android:id="@+id/tvFrgHomeImageHeading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/frgHomeImageHeading"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFrgHomeEpisode" />
+
+            <TextView
+                android:id="@+id/tvFrgHomeImageDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/open_sans_regular"
+                android:text="@string/frgHomeImageDes"
+                android:textColor="#DAD7D3"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toTopOf="@id/llFrgHomeWatch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFrgHomeImageHeading" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleFrgHomeContinueWatching"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFrgHomeDisplay"
+                tools:listitem="@layout/item_home_list" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

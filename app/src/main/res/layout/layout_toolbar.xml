@@ -19,27 +19,29 @@
 
                     <ImageView
                         android:id="@+id/ivToolBarLogo"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
                         android:src="@drawable/ic_logo"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
                     <ImageView
                         android:id="@+id/ivToolBarProfile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_home"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_profile"
                         android:layout_marginEnd="@dimen/_10sdp"
                         app:layout_constraintTop_toTopOf="parent"
                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent" />
                     <ImageView
                         android:id="@+id/ivToolBarSearch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:padding="@dimen/_5sdp"
                         android:src="@drawable/ic_search"
-                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/ivToolBarProfile"/>

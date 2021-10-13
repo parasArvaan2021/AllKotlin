@@ -23,8 +23,7 @@ class HomeListAdapter(val context:Context, private val listOfData:List<HomeListD
         viewHolder.tvHomeFrgHeader.text= pos.heading
 
         val adapter= HomeListChildAdapter(context,listOfData[position].data)
-        val layout=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
-        viewHolder.recyclerOfHome.layoutManager=layout
+        viewHolder.recyclerOfHome.layoutManager=LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         viewHolder.recyclerOfHome.adapter=adapter
 
         if(position==listOfData.lastIndex){

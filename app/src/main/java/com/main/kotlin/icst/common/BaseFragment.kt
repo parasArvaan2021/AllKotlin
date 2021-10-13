@@ -6,7 +6,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 
-class BaseFragment:Fragment() {
+open class BaseFragment:Fragment() {
     fun navigateToOtherFragment(destinationId: Int, bundle: Bundle?) {
         lifecycleScope.launchWhenResumed {
             val navOptions1 = NavOptions.Builder().setPopUpTo(destinationId, true).build()

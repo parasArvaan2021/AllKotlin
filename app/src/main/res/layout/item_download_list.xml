@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/_70sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/nature"
+        android:src="@drawable/sunset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         android:fontFamily="@font/open_sans_regular"
-        android:gravity="start"
+        android:gravity="start|bottom"
         android:text="Patient story"
         android:textColor="#215C6A"
         android:textSize="@dimen/_8sdp"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvFrgDownloadCatagory"
         app:layout_constraintTop_toBottomOf="@id/ivFrgDownloadImage"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgDownloadDescription"/>
+       />
 
     <TextView
         android:id="@+id/tvFrgDownloadDescription"
@@ -69,10 +69,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_regular"
         android:text="30 mins"
+        android:layout_marginTop="@dimen/_5sdp"
         android:textColor="@color/white"
         android:textSize="@dimen/_8sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvFrgDownloadDescription" />
 
     <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar

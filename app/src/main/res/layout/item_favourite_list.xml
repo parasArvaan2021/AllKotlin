@@ -11,17 +11,17 @@
 
 
     <ImageView
-        android:id="@+id/ivFrgFavouriteImage"
+        android:id="@+id/ivFrgVideoImage"
         android:layout_width="0dp"
         android:layout_height="@dimen/_70sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/nature"
+        android:src="@drawable/sunset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvFrgFavouriteCatagory"
+        android:id="@+id/tvFrgVideoCatagory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
@@ -30,13 +30,13 @@
         android:text="Patient story"
         android:textColor="#215C6A"
         android:textSize="@dimen/_8sdp"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgFavouriteDescription"
-        app:layout_constraintEnd_toStartOf="@id/tvFrgFavouriteDate"
+        app:layout_constraintBottom_toTopOf="@id/tvFrgVideoDescription"
+        app:layout_constraintEnd_toStartOf="@id/tvFrgVideoDate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivFrgFavouriteImage" />
+        app:layout_constraintTop_toBottomOf="@id/ivFrgVideoImage" />
 
     <TextView
-        android:id="@+id/tvFrgFavouriteDate"
+        android:id="@+id/tvFrgVideoDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
@@ -45,24 +45,23 @@
         android:text="12th March 21 "
         android:textColor="@color/white"
         android:textSize="@dimen/_8sdp"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgFavouriteDescription"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvFrgFavouriteCatagory"
-        app:layout_constraintTop_toBottomOf="@id/ivFrgFavouriteImage" />
+        app:layout_constraintStart_toEndOf="@id/tvFrgVideoCatagory"
+        app:layout_constraintTop_toBottomOf="@id/ivFrgVideoImage" />
 
     <TextView
-        android:id="@+id/tvFrgFavouriteDescription"
+        android:id="@+id/tvFrgVideoDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_5sdp"
         android:fontFamily="@font/open_sans_semibold"
-        android:text="Georgia my long Covid"
+        android:text="Georgia my long Covid Georgia my long Covid Georgia my long Covid"
         android:textColor="@color/white"
         android:textSize="@dimen/_9sdp"
         app:layout_constraintBottom_toTopOf="@id/tvFrgFavouriteMinute"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFrgFavouriteCatagory" />
+        app:layout_constraintTop_toBottomOf="@id/tvFrgVideoCatagory" />
 
     <TextView
         android:id="@+id/tvFrgFavouriteMinute"
@@ -70,17 +69,19 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_regular"
         android:text="30 mins"
+        android:layout_marginTop="@dimen/_5sdp"
         android:textColor="@color/white"
         android:textSize="@dimen/_8sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvFrgFavouriteDescription" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFrgVideoDescription" />
 
     <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
         android:id="@+id/progressBarFrgFavourite"
         android:layout_width="0dp"
         android:layout_height="@dimen/_3sdp"
-        app:layout_constraintBottom_toBottomOf="@id/ivFrgFavouriteImage"
+        app:layout_constraintBottom_toBottomOf="@id/ivFrgVideoImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:rcBackgroundColor="@color/white"

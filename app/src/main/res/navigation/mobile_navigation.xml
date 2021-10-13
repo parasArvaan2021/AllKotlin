@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.main.kotlin.icst.home.list.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/actionHomeToVideoPlayer"
+            app:destination="@id/navVideoPlayerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_favourite"
         android:name="com.main.kotlin.icst.favorite.FavoriteFragment"
@@ -38,9 +42,6 @@
     <fragment
         android:id="@+id/navVideoPlayerFragment"
         android:name="com.main.kotlin.icst.home.videoplayer.VideoPlayerFragment"
-        android:label="@string/title_videoplayer"
+        android:label="@string/titleVideoPlayer"
         tools:layout="@layout/fragment_video_player" />
-
-
-
 </navigation>

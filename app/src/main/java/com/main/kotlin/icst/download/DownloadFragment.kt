@@ -13,7 +13,7 @@ import com.main.kotlin.icst.download.adapter.DownloadListAdapter
 class DownloadFragment : Fragment() {
 
 
-    private val listOfRecyclerData=ArrayList<String>()
+    private val listOfRecyclerData = ArrayList<String>()
 
     // This property is only valid between onCreateView and
 
@@ -22,25 +22,21 @@ class DownloadFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-      
-
-        val view:View=inflater.inflate(R.layout.fragment_download,container,false)
 
 
-        for (i in 0..7){
+        val view: View = inflater.inflate(R.layout.fragment_download, container, false)
+
+
+        for (i in 0..7) {
             listOfRecyclerData.add("paras")
         }
 
-        val recycler:RecyclerView=view.findViewById(R.id.frgDownloadRecyclerView)
-        val adapter= DownloadListAdapter(requireActivity(),listOfRecyclerData)
-        val layout=GridLayoutManager(requireActivity(),2)
-        recycler.layoutManager=layout
-        recycler.adapter=adapter
+        val recycler: RecyclerView = view.findViewById(R.id.frgDownloadRecyclerView)
+
+        recycler.layoutManager = GridLayoutManager(requireActivity(), 2)
+        recycler.adapter = DownloadListAdapter(requireActivity(), listOfRecyclerData)
 
         return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-    }
 }

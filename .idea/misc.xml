@@ -87,6 +87,7 @@
         <entry key="..\:/Paras/MyAllProjectDemo/app/src/main/res/menu/menu_add_daily_schedule.xml" value="0.3171875" />
         <entry key="..\:/Paras/MyAllProjectDemo/app/src/main/res/menu/popup_menu.xml" value="0.3171875" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable-ldpi/ic_baseline_arrow_back_ios_24.xml" value="0.24739583333333334" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/circle_play_button.xml" value="0.2425944841675179" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/light_blue_full.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/list_view_background.xml" value="0.24739583333333334" />
@@ -96,6 +97,7 @@
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/register_background_button.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/register_border_button.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_bottom_nav_with_fabbutton.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.20925925925925926" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_bottom_navigation_with_fragment.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_choose_file.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_custom_progress.xml" value="0.22708333333333333" />
@@ -111,16 +113,18 @@
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/embiemedication.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_download.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_favorite.xml" value="0.22708333333333333" />
-        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_home.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_recently_added.xml" value="0.22708333333333333" />
-        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_setting.xml" value="0.22708333333333333" />
-        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_video_player.xml" value="0.33" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_video_player.xml" value="0.18" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_download_list.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_favourite_list.xml" value="0.22708333333333333" />
-        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_home_child_list.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_home_child_list.xml" value="0.20925925925925926" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_home_list.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_home_second_list.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_recentlyadded_list.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_video_player.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/item_video_player_list.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/layout_fragment_download.xml" value="0.25" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/layout_recyclerview.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/layout_toolbar.xml" value="0.22708333333333333" />

@@ -14,7 +14,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/_70sdp"
         android:scaleType="fitXY"
-        android:src="@drawable/nature"
+        android:src="@drawable/sunset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +44,6 @@
         android:text="12th March 21 "
         android:textColor="@color/white"
         android:textSize="@dimen/_8sdp"
-        app:layout_constraintBottom_toTopOf="@id/tvFrgRecentlyDescription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvFrgRecentlyCatagory"
         app:layout_constraintTop_toBottomOf="@id/ivFrgRecentlyImage" />
@@ -69,10 +68,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans_regular"
         android:text="30 mins"
+        android:layout_marginTop="@dimen/_5sdp"
         android:textColor="@color/white"
         android:textSize="@dimen/_8sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvFrgRecentlyDescription" />
 
     <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
