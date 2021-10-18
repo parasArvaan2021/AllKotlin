@@ -31,10 +31,13 @@
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.ApiExampleActivity"
+            android:exported="true" />
+        <activity
             android:name=".icst.DashboardActivity"
             android:exported="true"
-            android:theme="@style/Theme.NoActionBar"
-            android:label="@string/title_activity_bottom_navigation_with_fragment" />
+            android:label="@string/title_activity_bottom_navigation_with_fragment"
+            android:theme="@style/Theme.NoActionBar" />
         <activity
             android:name=".activity.BottomNavWithFABButton"
             android:exported="true"
@@ -55,7 +58,6 @@
             android:name=".icst.forgotpassword.ForgotPasswordActivity"
             android:exported="true"
             android:theme="@style/Theme.NoActionBar" />
-
         <activity
             android:name=".activity.GenerateNotification"
             android:exported="true"

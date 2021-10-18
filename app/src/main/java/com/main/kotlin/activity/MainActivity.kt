@@ -10,7 +10,6 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.main.kotlin.R
-import com.main.kotlin.icst.DashboardActivity
 import com.main.kotlin.icst.spleshscreen.SpleshScreenActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -30,7 +29,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnBottomNavWithFloating: Button =
             findViewById(R.id.btnBottomNavigationWithFloatingButton)
         val btnFragmentWithBottomNavigation: Button =
-            findViewById(R.id.btnFragmentWithBottomNavigation)
+            findViewById(R.id.btnIcst)
+        val btnApiExample: Button = findViewById(R.id.btnRetrofitApi)
 
 
         btn_ripple_effect.setOnClickListener(this)
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btnMoreTimeCreateNotification.setOnClickListener(this)
         btnFragmentWithBottomNavigation.setOnClickListener(this)
+        btnApiExample.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -86,8 +87,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 R.id.btnBottomNavigationWithFloatingButton -> {
                     startActivity(Intent(this, BottomNavWithFABButton::class.java))
                 }
-                R.id.btnFragmentWithBottomNavigation ->{
+                R.id.btnIcst -> {
                     startActivity(Intent(this, SpleshScreenActivity::class.java))
+                }
+                R.id.btnRetrofitApi->{
+                    startActivity(Intent(this@MainActivity,ApiExampleActivity::class.java))
                 }
             }
         }

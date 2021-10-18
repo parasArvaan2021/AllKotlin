@@ -1,102 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
-    <Button
-        android:id="@+id/btn_ripple_effect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ripple Efect with layout expand Animation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_custom_progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Custom StepWise Progress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_ripple_effect" />
+        <Button
+            android:id="@+id/btn_ripple_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ripple Efect with layout expand Animation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_embie_design"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Embie Design"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_custom_progress" />
+        <Button
+            android:id="@+id/btn_custom_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom StepWise Progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ripple_effect" />
 
-    <Button
-        android:id="@+id/BottomNavigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BottomNavigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_embie_design" />
+        <Button
+            android:id="@+id/btn_embie_design"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Embie Design"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_custom_progress" />
 
-    <Button
-        android:id="@+id/EmbieMedication"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Embie Medication"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/BottomNavigation" />
+        <Button
+            android:id="@+id/BottomNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomNavigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_embie_design" />
 
-    <Button
-        android:id="@+id/LocalFileOpen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Local File Open"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/EmbieMedication" />
+        <Button
+            android:id="@+id/EmbieMedication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Embie Medication"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/BottomNavigation" />
 
-    <Button
-        android:id="@+id/FragmentExampleWithoutStateClear"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FragmentExample_Without_StateClear"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/LocalFileOpen" />
+        <Button
+            android:id="@+id/LocalFileOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local File Open"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/EmbieMedication" />
 
-
-    <Button
-        android:id="@+id/btnOneORMoreTimeCreateNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ONe Or More Time Notification Create"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/FragmentExampleWithoutStateClear" />
+        <Button
+            android:id="@+id/FragmentExampleWithoutStateClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FragmentExample_Without_StateClear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LocalFileOpen" />
 
 
-    <Button
-        android:id="@+id/btnBottomNavigationWithFloatingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bottom Navigation With Floating Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnOneORMoreTimeCreateNotification"/>
-
-    <Button
-        android:id="@+id/btnFragmentWithBottomNavigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ICST.TV Project"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnBottomNavigationWithFloatingButton" />
+        <Button
+            android:id="@+id/btnOneORMoreTimeCreateNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ONe Or More Time Notification Create"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/FragmentExampleWithoutStateClear" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnBottomNavigationWithFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bottom Navigation With Floating Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnOneORMoreTimeCreateNotification" />
+
+        <Button
+            android:id="@+id/btnIcst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ICST.TV Project"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnBottomNavigationWithFloatingButton" />
+        <Button
+            android:id="@+id/btnRetrofitApi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Api Example"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnIcst" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

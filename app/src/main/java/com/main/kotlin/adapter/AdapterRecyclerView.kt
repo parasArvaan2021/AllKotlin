@@ -18,7 +18,7 @@ class AdapterRecyclerView(val context: Context, val size: ArrayList<String>,val 
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-            val viewHolder1: ViewHolder1 =holder as ViewHolder1
+            val viewHolder1=holder as ViewHolder1
             val uri = size[position]
             viewHolder1.ShowPath.text=uri
 //          Glide.with(context)
