@@ -35,7 +35,6 @@
                 android:id="@+id/ivFrgHomeDisplay"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_170sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:scaleType="fitXY"
                 android:src="@drawable/sunset"
                 app:layout_constraintBottom_toTopOf="@id/recycleFrgHomeContinueWatching"
