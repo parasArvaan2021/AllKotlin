@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.main.kotlin.R
+import com.main.kotlin.emeraldtrail.welcome.WelcomePageActivity
 import com.main.kotlin.icst.spleshscreen.SpleshScreenActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnFragmentWithBottomNavigation: Button =
             findViewById(R.id.btnIcst)
         val btnApiExample: Button = findViewById(R.id.btnRetrofitApi)
+        val btnEmeraldProject:Button=findViewById(R.id.btnEmeraldTrailProject)
 
 
         btn_ripple_effect.setOnClickListener(this)
@@ -45,6 +47,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnMoreTimeCreateNotification.setOnClickListener(this)
         btnFragmentWithBottomNavigation.setOnClickListener(this)
         btnApiExample.setOnClickListener(this)
+        btnEmeraldProject.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -92,6 +95,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 }
                 R.id.btnRetrofitApi->{
                     startActivity(Intent(this@MainActivity,ApiExampleActivity::class.java))
+                }
+                R.id.btnEmeraldTrailProject->{
+                    startActivity(Intent(this@MainActivity,WelcomePageActivity::class.java))
+
                 }
             }
         }

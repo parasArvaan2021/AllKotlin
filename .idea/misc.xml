@@ -96,6 +96,7 @@
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/nav_item_color_state.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/register_background_button.xml" value="0.24739583333333334" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/register_border_button.xml" value="0.24739583333333334" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/thumb_drawable.xml" value="0.2425944841675179" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_api_example.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_bottom_nav_with_fabbutton.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.20925925925925926" />
@@ -109,8 +110,10 @@
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_notification.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_register.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_register_emarald.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_splesh_screen.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_testing_notification.xml" value="0.22708333333333333" />
+        <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_welcome_page.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/embiemedication.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_download.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/fragment_favorite.xml" value="0.22708333333333333" />

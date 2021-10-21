@@ -31,6 +31,13 @@
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".emeraldtrail.register.RegisterEmeraldActivity"
+            android:exported="true" />
+        <activity
+            android:name=".emeraldtrail.welcome.WelcomePageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoActionBar" />
+        <activity
             android:name=".activity.ApiExampleActivity"
             android:exported="true" />
         <activity

@@ -234,4 +234,8 @@
     <string name="series">Series</string>
     <string name="favourite">Favourite</string>
     <string name="download">Download</string>
+    <string name="welcome_heading">Welcome!</string>
+    <string name="welcome_or">OR</string>
+    <string name="welcome_already_account">Already have a  <a href="">Trail Blazer</a> account?</string>
+    <string name="welcome_description">The people who choose  to spend time  outdoors are not running away from anything; we are returing  to where we belong,</string>
 </resources>
