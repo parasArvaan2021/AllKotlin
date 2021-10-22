@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">AllKotlin</string>
+    <string name="app_name">Emerald Trail</string>
+<!--    <string name="app_name">AllKotlin</string>-->
     <string name="description">Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.\n\n
     Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.</string>
 
@@ -236,6 +237,20 @@
     <string name="download">Download</string>
     <string name="welcome_heading">Welcome!</string>
     <string name="welcome_or">OR</string>
-    <string name="welcome_already_account">Already have a  <a href="">Trail Blazer</a> account?</string>
+    <string name="welcome_already_account">Already have a  <a href="https://google.com">Trail Blazer</a> account?</string>
     <string name="welcome_description">The people who choose  to spend time  outdoors are not running away from anything; we are returing  to where we belong,</string>
+    <string name="register_email">E MAIL</string>
+    <string name="register_mobile_number">MOBILE NUMBER</string>
+    <string name="register_first_name">FIRST NAME</string>
+    <string name="register_last_name">LAST NAME</string>
+    <string name="register_password">PASSWORD</string>
+    <string name="register_confirm_password">CONFIRM PASSWORD</string>
+    <string name="register_terms_condition">I agree the <a style="text-decoration:none" href="https://google.com">Terms and Condition</a></string>
+    <string name="i_agree_the">I agree the </string>
+    <string name="terms_condition">I agree the Terms and Condition</string>
+    <string name="signin_email">E-MAIL</string>
+    <string name="signin_password">PASSWORD</string>
+    <string name="signin_resend_email">Resend Verification E-mail</string>
+    <string name="signin_forgot_password">Forgot Password</string>
+    <string name="signin_need_help">Need Help?</string>
 </resources>

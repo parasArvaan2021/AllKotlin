@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clIncludeSignInContainer"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <EditText
+            android:id="@+id/tvSignInEmail"
+            style="@style/emerald_rect_edittext_style"
+            android:hint="@string/signin_email"
+            android:inputType="textEmailAddress"
+            android:maxLength="40"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/tvSignInPassword"
+            style="@style/emerald_rect_edittext_style"
+            android:hint="@string/signin_password"
+            android:inputType="textPassword"
+            android:maxLength="25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignInEmail" />
+
+        <ImageView
+            android:id="@+id/ivSignInBtnSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_signin_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSignInPassword" />
+
+        <TextView
+            android:id="@+id/tvSignInResendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/signin_resend_email"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toBottomOf="@id/ivSignInBtnSignIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tvSignInForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/signin_forgot_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toBottomOf="@id/tvSignInResendEmail"
+            app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvSignInNeedHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/signin_need_help"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvSignInForgotPassword"
+            app:layout_constraintTop_toBottomOf="@id/tvSignInResendEmail"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -141,4 +141,6 @@
     <color name="printColorHeading">#3E6C8A</color>
     <color name="line_color">#cccccc</color>
 
+
+    <color name="new_color">#79AB41</color>
 </resources>

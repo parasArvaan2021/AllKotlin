@@ -23,20 +23,31 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/ic_emeraldtrail_logo"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_emeraldtrail_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AllKotlin"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".emeraldtrail.register.RegisterEmeraldActivity"
+            android:theme="@style/Theme.NoActionBar"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".emeraldtrail.welcome.WelcomePageActivity"
             android:exported="true"
-            android:theme="@style/Theme.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.NoActionBar" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".activity.ApiExampleActivity"
             android:exported="true" />
@@ -109,11 +120,11 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
         <receiver
