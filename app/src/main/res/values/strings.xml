@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Emerald Trail</string>
+    <string name="app_name">All Kotlin Demo</string>
 <!--    <string name="app_name">AllKotlin</string>-->
     <string name="description">Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.\n\n
     Lorem ipsum dolor sit amet,consectetur adipiscing elit.Etiam efficitur ipsum in placerat molestie.Fusce quis mauris a enim sollicitudin.</string>

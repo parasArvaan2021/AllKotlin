@@ -41,11 +41,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.NoActionBar" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
         </activity>
         <activity
@@ -59,7 +55,10 @@
         <activity
             android:name=".activity.BottomNavWithFABButton"
             android:exported="true"
-            android:theme="@style/BottomNavigation" />
+            android:theme="@style/BottomNavigation"
+            >
+
+        </activity>
         <activity
             android:name=".icst.spleshscreen.SpleshScreenActivity"
             android:exported="true"
@@ -120,11 +119,11 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <receiver

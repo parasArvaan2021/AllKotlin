@@ -10,15 +10,17 @@
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_40sdp"
         android:layout_marginStart="-10dp"
         android:layout_gravity="bottom"
+        android:paddingEnd="@dimen/_15sdp"
         app:fabAlignmentMode="center"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
         android:backgroundTint="@color/white"
-        android:paddingEnd="15dp"
-        app:fabCradleMargin="5dp"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:fabCradleVerticalOffset="5dp">
+        app:fabCradleRoundedCornerRadius="0dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
@@ -38,6 +40,9 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:fabCustomSize="@dimen/_58sdp"
+        app:fabSize="auto"
         android:backgroundTint="@color/black"
         android:contentDescription="@string/app_name"
         app:backgroundTint="@color/black"

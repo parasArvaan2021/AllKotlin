@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/drawable/emarald_checkbox_background.xml" value="0.16574074074074074" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/drawable/emerald_rect_edittext.xml" value="0.16574074074074074" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/drawable/nav_item_color_state.xml" value="0.24739583333333334" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_bottom_nav_with_fabbutton.xml" value="0.22708333333333333" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.18333333333333332" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_embie_design.xml" value="0.22708333333333333" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_embie_medication.xml" value="0.22708333333333333" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_main.xml" value="0.22708333333333333" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_medication.xml" value="0.2064814814814815" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_register_emarald_new.xml" value="0.12314814814814815" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_ripple_effect.xml" value="0.22708333333333333" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/activity_welcome_page.xml" value="0.2609375" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/layout/include_register.xml" value="0.2609375" />
+        <entry key="..\:/JayCode/PhaseOne/AllKotlin/app/src/main/res/menu/bottom_navigation_fab_main.xml" value="0.22708333333333333" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/drawable/emarald_checkbox_background.xml" value="0.184375" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_register_emarald.xml" value="0.1685185185185185" />
         <entry key="..\:/paras/AllKotlin/app/src/main/res/layout/activity_register_emarald_new.xml" value="0.22708333333333333" />
